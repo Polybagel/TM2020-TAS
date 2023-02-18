@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <Windows.h>
 #include <vector>
 #include <Psapi.h>
@@ -7,6 +8,7 @@
 
 using namespace std;
 
+//Takes in a base pointer and offsets to find the address we're looking for.
 uintptr_t FindDMAAddy(HANDLE hProc, uintptr_t ptr, vector <unsigned int> offsets)
 {
     uintptr_t addr = ptr;
@@ -57,6 +59,9 @@ int main()
 
     uintptr_t pos_addr = FindDMAAddy(handle, dynamicPtrBaseAddr, offsets);
 
+    ofstream outfile;
+    outfile.open("./car-location.txt");
+
     for (;;)
     {
         ReadProcessMemory(handle, (PBYTE*)pos_addr, &playerPosition.x, sizeof(float), 0);
@@ -70,8 +75,10 @@ int main()
         cout << "    y: " << playerPosition.y << endl;
         cout << "    z: " << playerPosition.z << "\r";
 
-        Sleep(150);
+        outfile << playerPosition.x << "," << playerPosition.y << "," << playerPosition.z << endl;
     }
+
+    outfile.close();
 
     return 0;
 }

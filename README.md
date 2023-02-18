@@ -2,6 +2,8 @@
 
 TM2020-TAS is a TAS tool for Trackmania 2020, written in C++/Python.
 
+Only supported on Windows as this tool uses several Windows API calls.
+
 ## How does it work?
 
 TM2020-TAS uses a combination of replay input extraction and memory reading to assist in TASes.
@@ -9,7 +11,7 @@ TM2020-TAS uses a combination of replay input extraction and memory reading to a
 ### **NOTE:** *These instructions are not final as several of these features have not yet been implemented, so everything is subject to change.*
 
 1. Open Trackmania, and load the map you want to TAS.
-2. Open the memory sniffer application. This will attach to Trackmania and monitor the car's location. This is useful for TAS splicing later in the process.
+2. Open the memory sniffer application. This will attach to Trackmania and monitor the car's location. This is useful for TAS splicing later in the process. *This may be replaced if I figure out how to extract ghost car locations from replay files lol*
 3. After you've completed the map, save the replay.
 4. Open the replay file with the replay input extractor. This will extract all user inputs during the run.
 5. Open the splicer. This will take in both the monitored car location and the extracted replay inputs. With both of these, you can see exactly where your car was at any point in time.
