@@ -27,3 +27,4 @@ As stated above, this tool is very much a work in progress, but this is what has
 | Car Location Monitoring | Completed |
 | TAS Replay | Not Implemented |
 | Brute Force | Not Implemented |
+| Cohesive GUI | Not Implemented |
