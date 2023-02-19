@@ -23,10 +23,10 @@ TM2020-TAS uses a combination of replay input extraction and memory reading to a
 
 As stated above, this tool is very much a work in progress, but this is what has been completed and what is left to do.
 
-| Feature | Completed? |
-| ------- | ---------- |
-| Replay Input Extraction | Partially Implemented |
-| Car Location Monitoring | Completed |
-| TAS Replay | Not Implemented |
-| Brute Force | Not Implemented |
-| Cohesive GUI | Not Implemented |
+| Feature | Description | Completed? |
+| ------- | ----------- | ---------- |
+| Replay Input Extraction | Extracting user inputs and ghost positions | Partially Implemented |
+| Car Location Monitoring | This may be replaced with better replay input extraction | Completed |
+| TAS Replay | The TAS being able to replay inputs in the game to actually perform the TAS | Not Implemented |
+| Brute Force | Being able to brute force inputs to get a faster run | Not Implemented |
+| Cohesive GUI | A GUI to configure and perform a TAS | Not Implemented |
